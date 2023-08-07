@@ -5,9 +5,8 @@ import generateShootPosition from "../../utils/generateShootPosition";
 const StartGame: React.FC = () => {
   const [started, setStarted] = useState(false);
   const [finalMessage, setFinalMessage] = useState(false);
-  const { isAllShipsReady, grid, shootPosition, winFinalMessage } = useContext(
-    PlayfieldContext
-  );
+  const { isAllShipsReady, grid, shootPosition, winFinalMessage } =
+    useContext(PlayfieldContext);
 
   useEffect(() => {
     let timeOutId: number;
@@ -18,7 +17,7 @@ const StartGame: React.FC = () => {
       } else {
         timeOutId = window.setTimeout(
           () => shootPosition(generateShootPosition(grid)),
-          0
+          0,
         );
       }
     }

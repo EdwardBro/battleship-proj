@@ -6,7 +6,7 @@ export default function isAlreadyShipLogic(
   cell: number,
   grid: GridType,
   rowIndex: number,
-  colIndex: number
+  colIndex: number,
 ): boolean {
   return (
     !cell &&

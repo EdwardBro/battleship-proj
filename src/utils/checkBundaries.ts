@@ -6,7 +6,7 @@ import { GridType } from "../components/Grid/Grid";
 export default function checkBundaries(
   grid: GridType,
   rowIndex: number,
-  colIndex: number
+  colIndex: number,
 ): boolean {
   return (
     get(grid, `[${rowIndex}][${colIndex}]`) === 1 ||

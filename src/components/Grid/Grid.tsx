@@ -15,7 +15,7 @@ const Grid: React.FC = () => {
       const isAlreadyShipThere = (
         cell: number,
         rowIndex: number,
-        colIndex: number
+        colIndex: number,
       ): void => {
         if (isAlreadyShipLogic(cell, grid, rowIndex, colIndex)) {
           setFirstPosition(rowIndex, colIndex);
@@ -45,7 +45,7 @@ const Grid: React.FC = () => {
           })}
         </div>
       );
-    }
+    },
   );
 
   return <div className={"column"}>{createGrid}</div>;
