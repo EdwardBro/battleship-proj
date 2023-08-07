@@ -1,7 +1,7 @@
 import { GridType } from "../components/Grid/Grid";
 
 export default function generateShootPosition(
-  grid: GridType
+  grid: GridType,
 ): [number, number] {
   // Generate shoot with random coords
   // Retuns array with y and x coords [0,0]

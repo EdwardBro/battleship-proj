@@ -17,7 +17,7 @@ const Playground: React.FC = () => {
   const [shapedShip, setShapedShip] = useState<[number, number]>([0, 0]);
   const [selectedShapeShip, setSelectedShapeShip] = useState(0);
   const [isAllShipsReady, setIsAllShipsReady] = useState(
-    initialShipSetup.allShipsCount
+    initialShipSetup.allShipsCount,
   );
 
   // set Ship on the grid with given coords (rowIndex, colIndex)
