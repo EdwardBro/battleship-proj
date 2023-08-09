@@ -1,8 +1,8 @@
-import checkBundaries from "./utils/checkBundaries";
+import checkBoundaries from "./utils/checkBoundaries";
 import createGrid from "./utils/createGrid";
 
 test("checkBundaries should return false", () => {
-  expect(checkBundaries()).toBeFalsy();
+  expect(checkBoundaries()).toBeFalsy();
 });
 
 describe("arrayContaining", () => {

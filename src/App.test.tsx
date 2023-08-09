@@ -1,9 +1,9 @@
-import checkBundaries from "./utils/checkBundaries";
+import checkBoundaries from "./utils/checkBoundaries";
 import createGrid from "./utils/createGrid";
 
 describe("Boundaries", () => {
   it("checkBundaries should return false", () => {
-    expect(checkBundaries([[0, 0]], 2, 3)).toBeFalsy();
+    expect(checkBoundaries([[0, 0]], 2, 3)).toBeFalsy();
   });
 });
 

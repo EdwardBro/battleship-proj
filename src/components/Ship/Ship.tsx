@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import "./Ship.css";
 import PlayfieldContext from "../Playground/Playground.context";
-import checkBundaries from "../../utils/checkBundaries";
+import checkBoundaries from "../../utils/checkBoundaries";
 
 interface InShip {
   label: string;
@@ -43,7 +43,7 @@ const Ship: React.FC<InShip> = ({ label, count, cellSize }) => {
         ]);
 
       return ship.some(([rowIndex, colIndex]) => {
-        return checkBundaries(grid, rowIndex, colIndex);
+        return checkBoundaries(grid, rowIndex, colIndex);
       })
         ? []
         : ship;
@@ -57,7 +57,7 @@ const Ship: React.FC<InShip> = ({ label, count, cellSize }) => {
         ]);
 
       return ship.some(([rowIndex, colIndex]) => {
-        return checkBundaries(grid, rowIndex, colIndex);
+        return checkBoundaries(grid, rowIndex, colIndex);
       })
         ? []
         : ship;
@@ -71,7 +71,7 @@ const Ship: React.FC<InShip> = ({ label, count, cellSize }) => {
         ]);
 
       return ship.some(([rowIndex, colIndex]) => {
-        return checkBundaries(grid, rowIndex, colIndex);
+        return checkBoundaries(grid, rowIndex, colIndex);
       })
         ? []
         : ship;
@@ -111,7 +111,7 @@ const Ship: React.FC<InShip> = ({ label, count, cellSize }) => {
       }
 
       setPosition(ship);
-      setSelectedShapeShip(0); // set selected ship type (L, I, O) on grid
+      setSelectedShapeShip(0); // set selected ship type (1,2,3,4) on grid
     }
   }, [shapedShip[0], shapedShip[1]]);
 

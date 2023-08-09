@@ -8,10 +8,10 @@ export type GridType = number[][];
 const Grid: React.FC = () => {
   const { grid, setFirstPosition } = useContext(PlayfieldContext);
 
-  // create onscreen grid
+  // Render onscreen grid
   const createGrid = grid.map(
     (row: number[], rowIndex: number): JSX.Element => {
-      // check if ship there
+      // Check if ship there
       const isAlreadyShipThere = (
         cell: number,
         rowIndex: number,
@@ -38,9 +38,7 @@ const Grid: React.FC = () => {
                     : "Empty-cell-color"
                 }`}
                 onClick={() => isAlreadyShipThere(cell, rowIndex, colIndex)}
-              >
-                {cell.toLocaleString().slice(0, 0)}
-              </div>
+              ></div>
             );
           })}
         </div>

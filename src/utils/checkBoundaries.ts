@@ -3,7 +3,7 @@ import { GridType } from "../components/Grid/Grid";
 
 // check boundaries of the shaped ship
 // returns boolean (this shape can easily go to this cell or not)
-export default function checkBundaries(
+export default function checkBoundaries(
   grid: GridType,
   rowIndex: number,
   colIndex: number
