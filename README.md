@@ -1,5 +1,12 @@
+🚧 WIP 🚧
+
 Classic Board Game on React and Typescript! Enjoy!
-Link to deployed project: https://battleship-proj.vercel.app/
+
+Link to deployed project on Vercel: https://battleship-proj.vercel.app/
+
+Tech stack:
+  React
+  Typescript
 
 # Getting Started with Create React App
 
