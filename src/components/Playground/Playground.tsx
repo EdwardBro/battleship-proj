@@ -33,17 +33,6 @@ const Playground: React.FC = () => {
 
       // subtract the ship button by 1 each selected time to disable the button
       switch (selectedShapeShip) {
-        case initialShipSetup.shape1.cellSize:
-          setInitialShip((oldState) => ({
-            ...oldState,
-            shape1: {
-              ...oldState.shape1,
-              count: oldState.shape1.count - 1,
-            },
-          }));
-          setIsAllShipsReady(isAllShipsReady - 1);
-          break;
-
         case initialShipSetup.shape2.cellSize:
           setInitialShip((oldState) => ({
             ...oldState,
@@ -65,6 +54,7 @@ const Playground: React.FC = () => {
           }));
           setIsAllShipsReady(isAllShipsReady - 1);
           break;
+
         case initialShipSetup.shape4.cellSize:
           setInitialShip((oldState) => ({
             ...oldState,
@@ -77,6 +67,14 @@ const Playground: React.FC = () => {
           break;
 
         default:
+          setInitialShip((oldState) => ({
+            ...oldState,
+            shape1: {
+              ...oldState.shape1,
+              count: oldState.shape1.count - 1,
+            },
+          }));
+          setIsAllShipsReady(isAllShipsReady - 1);
           break;
       }
     }
@@ -120,7 +118,7 @@ const Playground: React.FC = () => {
     >
       <div className={"ui container"}>
         <Header />
-        <div className={"ui equal width grid"}>
+        <div className={"ui equal width stackable grid"}>
           <div className={"row"}>
             <Grid />
             <Menu />
