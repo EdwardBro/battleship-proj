@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Ship from "../Ship/Ship";
+import ShipButton from "../ShipButton/ShipButton";
 import StartGame from "../StartGame/StartGame";
 import PlayfieldContext from "../Playground/Playground.context";
 
@@ -12,7 +12,7 @@ const Menu: React.FC = () => {
     <div className={"column"}>
       <div className={"ui vertical buttons"}>
         {shipShapesArray.map((shape, index) => (
-          <Ship key={index} {...shape} />
+          <ShipButton key={index} {...shape} />
         ))}
       </div>
       <div className={"ui divider"}></div>
