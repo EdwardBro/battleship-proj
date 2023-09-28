@@ -1,10 +1,6 @@
 import React from "react";
 import { GridType } from "../Grid/Grid";
-import {
-  greetingWords,
-  initialShipSetup,
-  winFinalMessage,
-} from "../../constants";
+import { greetingWords, initialShipSetup } from "../../constants";
 
 interface IPlayfieldContext {
   greetingWords: typeof greetingWords;
@@ -17,7 +13,6 @@ interface IPlayfieldContext {
   initialShip: typeof initialShipSetup;
   isAllShipsReady: boolean;
   shootPosition: ([rowIndex, colIndex]: [number, number]) => void;
-  winFinalMessage: typeof winFinalMessage;
 }
 
 const PlayfieldContext = React.createContext<IPlayfieldContext>({
@@ -31,7 +26,6 @@ const PlayfieldContext = React.createContext<IPlayfieldContext>({
   initialShip: initialShipSetup,
   isAllShipsReady: true,
   shootPosition: () => {},
-  winFinalMessage,
 });
 
 export default PlayfieldContext;

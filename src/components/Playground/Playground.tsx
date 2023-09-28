@@ -5,11 +5,7 @@ import Menu from "../Menu/Menu";
 import Header from "../Header/Header";
 import createGrid from "../../utils/createGrid";
 import PlayfieldContext from "./Playground.context";
-import {
-  initialShipSetup,
-  greetingWords,
-  winFinalMessage,
-} from "../../constants";
+import { initialShipSetup, greetingWords } from "../../constants";
 
 const Playground: React.FC = () => {
   const [initialShip, setInitialShip] = useState(initialShipSetup);
@@ -113,7 +109,6 @@ const Playground: React.FC = () => {
         initialShip,
         isAllShipsReady: !!isAllShipsReady,
         shootPosition,
-        winFinalMessage,
       }}
     >
       <div className={"ui container"}>

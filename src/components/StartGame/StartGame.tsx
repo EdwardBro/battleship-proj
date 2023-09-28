@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import PlayfieldContext from "../Playground/Playground.context";
 import generateShootPosition from "../../utils/generateShootPosition";
+import { GAME_MESSAGE } from "../../constants";
 
 const StartGame: React.FC = () => {
   const [started, setStarted] = useState(false);
   const [finalMessage, setFinalMessage] = useState(false);
-  const { isAllShipsReady, grid, shootPosition, winFinalMessage } = useContext(
-    PlayfieldContext
-  );
+  const { isAllShipsReady, grid, shootPosition } = useContext(PlayfieldContext);
 
   useEffect(() => {
     let timeOutId: number;
@@ -30,9 +29,7 @@ const StartGame: React.FC = () => {
   }, [grid.flat().join(" "), started]);
 
   const gameOver = () => {
-    return (
-      <div className={"ui big blue message"}>{winFinalMessage.message}</div>
-    );
+    return <div className={"ui big blue message"}>{GAME_MESSAGE.WIN}</div>;
   };
 
   return (

@@ -30,11 +30,8 @@ export const initialShipSetup = {
   allShipsCount: 10,
 };
 
-//Victory Message
-export const winFinalMessage = {
-  message: "Enemy ships have sunk and game is over! You have won!",
-};
-//Defeat message
-export const looseFinalMessage = {
-  message: "Your ships have sunk and game is over! You have lost!",
-};
+//Messages
+export enum GAME_MESSAGE {
+  WIN = "Enemy ships have sunk and game is over! You have won!",
+  LOOSE = "Your ships have sunk and game is over! You have lost!",
+}
